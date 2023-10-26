@@ -13,7 +13,15 @@ import {
   Spacer,
 } from "@nextui-org/react";
 import { useEffect, useState } from "react";
-
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+  useDisclosure,
+} from "@nextui-org/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -44,6 +52,7 @@ export default function Home() {
   const [scrollPercentage, setScrollPercentage] = useState(0);
   const [timeSpent, setTimeSpent] = useState(0);
   const [mouseClicks, setMouseClicks] = useState(0);
+  const [isOpen, setOpen] = useState(true);
 
   useEffect(() => {
     // Track scroll events
@@ -165,6 +174,39 @@ export default function Home() {
     <main
       className={`flex flex-col items-center justify-between p-24 ${inter.className}`}
     >
+      <Modal
+        backdrop={"blur"}
+        isOpen={isOpen}
+        onClose={() => {
+          setOpen(false);
+        }}
+      >
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">Warning</ModalHeader>
+              <ModalBody>
+                <p>
+                  This website is displays sensitive information about your
+                  device, browser, and location.
+                </p>
+                <p>
+                  If you are ScreenSharing this page, please be aware that this
+                  information will be included on the site.
+                </p>
+                <p>
+                  To view the information, click the "Confirm" button below.
+                </p>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="primary" onPress={onClose}>
+                  Confirm
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
       <div className="max-w-5xl w-full flex flex-col items-center justify-center font-mono text-sm lg:flex-row lg:justify-between">
         <Image
           src="https://cdn.urlcut.app/DataDig.png"
