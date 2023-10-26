@@ -65,42 +65,42 @@ export default function App({ Component, pageProps }) {
         ) : null}
         <main className="min-h-screen retro-vibes text-foreground bg-background">
           <Head>
-            <title>Urlcut</title>
-            <meta name="title" content="Urlcut - Shorten Your Links." />
+            <title>Datadig</title>
+            <meta name="title" content="DataDig" />
             <meta
               name="description"
-              content="Quick, easy, and free URL shortener."
+              content="See all the data a website can gather about you with DataDigBuy"
             />
 
             {/* Open Graph (OG) meta tags for social sharing */}
-            <meta property="og:title" content="Urlcut - Shorten Your Links" />
+            <meta property="og:title" content="DataDig" />
             <meta
               property="og:description"
-              content="Quick, easy, and free URL shortener."
+              content="See all the data a website can gather about you with DataDigBuy"
             />
             <meta
               property="og:image"
-              content="https://storage.tally.so/e62ccd35-f7cc-41a0-884a-722b3b7bfe7a/Urlcut.png"
+              content="https://cdn.urlcut.app/DataDig.png"
             />
             <meta property="og:url" content="https://urlcut.app/" />
 
             {/* Twitter Card meta tags for Twitter sharing */}
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content="Urlcut - Shorten Your Links" />
+            <meta name="twitter:title" content="DataDig" />
             <meta
               name="twitter:description"
-              content="Quick, easy, and free URL shortener."
+              content="See all the data a website can gather about you with DataDigBuy"
             />
             <meta
               name="twitter:image"
-              content="https://urlcut.app/assets/twitter-card.png"
+              content="https://cdn.urlcut.app/DataDig.png"
             />
 
             {/* Additional meta tags */}
             <meta name="author" content="Urlcut" />
             <meta
               name="keywords"
-              content="URL shortener, link shortener, shorten URLs"
+              content="Data, Content, WebsiteData, DataDig"
             />
           </Head>
           <Component {...pageProps} />
