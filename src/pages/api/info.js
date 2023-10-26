@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   // Get the user's timezone offset
   const clientTimeZoneOffset = getClientTimeZoneOffset();
   // Get the user's IP address
-  const userIP = req.connection.remoteAddress;
+  const userIP = req.headers["x-forwarded-for"] || req.connection.remoteAddress;
 
   // Get the user's preferred language and locale
   const userLanguage = formatAcceptLanguage(req.headers["accept-language"]);

@@ -309,7 +309,7 @@ export default function Home() {
             <Code>Location: {loc}</Code>
             <Divider className="my-1" />
             <Tooltip content={org}>
-              <Code>Organization: {org.substring(0, 11) + "..."}</Code>
+              <Code>Organization: {org.substring(0, 17) + "..."}</Code>
             </Tooltip>
           </CardBody>
         </Card>
